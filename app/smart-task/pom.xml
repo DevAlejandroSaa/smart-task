@@ -28,6 +28,23 @@
     <build>
         <plugins>
 
+            <!-- Generar Javadoc -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>3.11.2</version>
+
+                <executions>
+                    <execution>
+                        <id>generate-javadoc</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>javadoc</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
             <!-- Ejecutar pruebas unitarias -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
